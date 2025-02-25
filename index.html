@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--ccs en el head siempre y javascript abajo en el body-->
+    <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 30px;
+            background-color: #f0ecec;
+        }
+
+        input{
+            background-color: #fbf9f9;
+        }
+        h1, h2{
+            text-align: center;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-container img {
+            width: 50px; 
+            height: auto;
+            margin-left: 10px;
+        }
+
+        .container{
+            background-color: #b0aeae;
+            width: 90%;
+            max-width: 1000px;
+            padding-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+
+        #formPersona{
+            padding-top: 10px;
+        }
+        label{
+            display:block;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        input,select,textarea{
+            width: 90%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+       .container-Button{
+        padding: 10px 250px 40px 250px;
+       }
+    </style>
+</head>
+<body>
+    <div class="container mb-3">
+        <div class="header-container">
+            <h1>Registro de persona</h1>
+        <img src="media/usuario.png">
+        </div>
+        <form id="formPersona">
+            <fieldset class="border p-3 rounded mb-3">
+                <div class="header-container">
+                    <legend class="w-auto">Datos Personales</legend>
+                    <img src="media/datos.png" alt="">
+                </div>
+               
+                
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre:</label>
+                    <input type="text" class="form-control" name="nombre" id="nombre" placeholder="José" required>
+                    <div class="invalid-feedback">Por favor, ingresa tu nombre.</div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="apellido" class="form-label">Apellido:</label>
+                    <input type="text" class="form-control" name="apellido" id="apellido" placeholder="Perez" required>
+                    <div class="invalid-feedback">Por favor, ingresa tu apellido.</div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="edad" class="form-label">Edad:</label>
+                    <input type="number" class="form-control" name="edad" id="edad" placeholder="18" required min="1">
+                    <div class="invalid-feedback">Por favor, ingresa una edad válida.</div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="genero" class="form-label">Género</label>
+                    <select class="form-select" name="genero" id="genero">
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
+                        <option value="Otros">Otros</option>
+                    </select>
+                </div>
+            </fieldset>
+            
+            
+            
+
+            <fieldset class="border p-3 rounded mb-3">
+                <div class="header-container">
+                    <legend class="w-auto">Datos de Contacto</legend>
+                    <img src="media/libro-de-contactos.png" alt="">
+                </div>
+                
+                
+                <div class="mb-3">
+                    <label for="telefono" class="form-label">Teléfono:</label>
+                    <input type="tel" class="form-control" name="telefono" id="telefono" required>
+                    <div class="invalid-feedback">Por favor, ingresa un número de teléfono válido.</div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo Electrónico:</label>
+                    <input type="email" class="form-control" name="email" aria-describedby="emailHelp" id="email" placeholder="example@email.com" required>
+                    <div id="emailHelp" class="form-text">Nunca compartiremos tu correo con nadie más.</div>
+                    <div class="invalid-feedback">Por favor, ingresa un correo electrónico válido.</div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="password" class="form-label">Contraseña:</label>
+                    <input type="password" class="form-control" name="password" id="password" placeholder="********" aria-describedby="passwordHelpBlock" required>
+                    <div class="invalid-feedback">Por favor, ingresa una contraseña.</div>
+                </div>
+            </fieldset>
+            
+            <fieldset class="border p-3 rounded mb-3">
+                <div class="header-container">
+                    <legend class="w-auto">Datos Adicionales</legend>
+                    <img src="media/adicional.png" alt="">
+                </div>
+                
+                
+                <div class="mb-3">
+                    <label for="direccion" class="form-label">Dirección:</label>
+                    <textarea class="form-control" id="direccion"></textarea>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="fecha" class="form-label">Fecha de Nacimiento:</label>
+                    <input type="date" class="form-control" name="fecha" id="fecha" required>
+                    <div class="invalid-feedback">Por favor, selecciona una fecha de nacimiento válida.</div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="color" class="form-label">Color Favorito:</label>
+                    <input type="color" class="form-control form-control-color" id="color" name="color">
+                </div>
+                
+                <div class="mb-3">
+                    <label for="archivo" class="form-label">Subir Archivo:</label>
+                    <input type="file" class="form-control" id="archivo" name="archivo">
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">Preferencias:</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="notificaciones" name="notificaciones">
+                        <label class="form-check-label" for="notificaciones">Recibir notificaciones</label>
+                    </div>
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">Estado Civil:</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="estadoCivil" id="soltero" value="soltero">
+                        <label class="form-check-label" for="soltero">Soltero</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="estadoCivil" id="casado" value="casado">
+                        <label class="form-check-label" for="casado">Casado</label>
+                    </div>
+                </div>
+            </fieldset>
+            
+            
+            <div class="container-Button">
+                <input type="submit" value="Guardar" class="btn btn-primary">
+            </div>
+            
+
+            <div class="container mb-3">
+                <h2>Lista de Personas Registradas</h2>
+                <div class="table-responsive">
+                    <table id="tablaPersonas" class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Edad</th>
+                                <th>Género</th>
+                                <th>Teléfono</th>
+                                <th>Correo</th>
+                                <th>Dirección</th>
+                                <th>Fecha Nacimiento</th>
+                                <th>Color Favorito</th>
+                                <th>Archivo</th>
+                                <th>Notificaciones</th>
+                                <th>Estado Civil</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Aquí se agregarán las filas con los datos -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        
+
+        </form>
+    </div>
+    <script>
+        document.getElementById("formPersona").addEventListener("submit", function(event) {
+            event.preventDefault();
+    
+            const persona = {
+                nombre: document.getElementById("nombre").value,
+                apellido: document.getElementById("apellido").value,
+                edad: document.getElementById("edad").value,
+                genero: document.getElementById("genero").value,
+                telefono: document.getElementById("telefono").value,
+                email: document.getElementById("email").value,
+                direccion: document.getElementById("direccion").value,
+                fecha: document.getElementById("fecha").value,
+                color: document.getElementById("color").value,
+                archivo: document.getElementById("archivo").files.length > 0 ? document.getElementById("archivo").files[0].name : "No subido",
+                notificaciones: document.getElementById("notificaciones").checked ? "Sí" : "No",
+                estadoCivil: document.querySelector('input[name="estadoCivil"]:checked') ? document.querySelector('input[name="estadoCivil"]:checked').value : "No especificado"
+            };
+    
+            agregarFila(persona);
+            this.reset(); // Limpiar el formulario después de agregar
+        });
+    
+        function agregarFila(persona) {
+            const tabla = document.getElementById("tablaPersonas").getElementsByTagName("tbody")[0];
+            const nuevaFila = tabla.insertRow();
+    
+            nuevaFila.innerHTML = `
+                <td>${persona.nombre}</td>
+                <td>${persona.apellido}</td>
+                <td>${persona.edad}</td>
+                <td>${persona.genero}</td>
+                <td>${persona.telefono}</td>
+                <td>${persona.email}</td>
+                <td>${persona.direccion}</td>
+                <td>${persona.fecha}</td>
+                <td><input type="color" value="${persona.color}" disabled></td>
+                <td>${persona.archivo}</td>
+                <td>${persona.notificaciones}</td>
+                <td>${persona.estadoCivil}</td>
+            `;
+        }
+    </script>
+    
+    <!--const es que va varia el valor, var es global, let solo se ve en la clase que se trabaja-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
