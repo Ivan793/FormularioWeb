@@ -1,0 +1,58 @@
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    background-color: #f0ecec;
+}
+
+input{
+    background-color: #fbf9f9;
+}
+h1, h2{
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-container img {
+    width: 50px; 
+    height: auto;
+    margin-left: 10px;
+}
+
+.container{
+    background-color: #b0aeae;
+    width: 90%;
+    max-width: 1000px;
+    padding-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+#formPersona{
+    padding-top: 10px;
+}
+label{
+    display:block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input,select,textarea{
+    width: 90%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.container-Button{
+padding: 10px 250px 40px 250px;
+}
